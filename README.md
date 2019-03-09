@@ -26,6 +26,30 @@ function MyComponent() {
 }
 ```
 
+## Scaling react component instead of DOM elements
+
+If you're passing through a react component instead of DOM element into ScaledComponent, it might not work. Be sure to pass the ref of the container up the tree so we can get it.
+
+Otherwise, you can also pass the attribute `renderChild` which should be a *function* that renders the child with appropriate refs.
+
+Example with [material-ui](https://material-ui.com/api/root-ref/#__next):
+```js
+import ScaledComponent from 'react-scaled-component'
+import { RootRef, Table } from '@material-ui/core'
+
+function MyComponent() {
+  return (
+    <ScaledComponent renderChild={(ref, child) => (
+      <RootRef rootRef={ref} children={child} />
+    )}>
+      <Table>
+        ...
+      </Table>
+    </ScaledComponent>
+  )
+}
+```
+
 ## How it works
 
 There aren't really a good way to get the size of a container the moment it stops scaling horizontally. We need to know this to calculate how much to scale.
