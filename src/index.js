@@ -16,7 +16,7 @@ export default props => {
 						? {
 								transform: `scale(${Math.min(containerSize.width / shadowSize.width, 1)})`,
 								transformOrigin: 'top left',
-						  }
+							}
 						: {}
 				}
 			>
@@ -28,4 +28,3 @@ export default props => {
 		</div>
 	)
 }
-
