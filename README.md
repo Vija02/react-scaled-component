@@ -1,6 +1,6 @@
 # React Scaled Component (`react-scaled-component`)
 
-TODO: Add gif
+![](media/demo.gif)
 
 Most time, you want to create a custom component for when responsive website is needed. However, other times you simply need it to **scale down when the "breaking point" is reached horizontally**. This library does just that.
 
