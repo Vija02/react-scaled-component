@@ -4,17 +4,11 @@
 	"description": "A simple React component to help create responsive websites",
 	"main": "dist/index.js",
 	"scripts": {
-    "build": "webpack",
-    "release": "release-it",
+		"build": "webpack",
+		"release": "release-it",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"keywords": [
-		"react",
-		"responsive",
-		"css",
-		"javascript",
-		"web"
-	],
+	"keywords": ["react", "responsive", "css", "javascript", "web"],
 	"author": "Vija02",
 	"license": "MIT",
 	"dependencies": {
