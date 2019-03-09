@@ -1,4 +1,5 @@
 # React Scaled Component (`react-scaled-component`)
+[![npm version](https://badge.fury.io/js/react-scaled-component.svg)](https://badge.fury.io/js/react-scaled-component)
 
 ![](media/demo.gif)
 
