@@ -8,15 +8,18 @@ export default props => {
 	const containerRef = useRef(null)
 	const containerSize = useComponentSize(containerRef)
 
+	const shouldScale = containerSize.width < shadowSize.width
+	const scale = Math.min(containerSize.width / shadowSize.width, 1)
+
 	return (
-		<div ref={containerRef} style={{ position: 'relative' }}>
+		<div ref={containerRef} style={shouldScale ? { position: 'relative', height: shadowSize.height * scale } : { position: 'relative' }}>
 			<div
 				style={
-					containerSize.width < shadowSize.width
+					shouldScale
 						? {
-								transform: `scale(${Math.min(containerSize.width / shadowSize.width, 1)})`,
-								transformOrigin: 'top left',
-							}
+							transform: `scale(${scale})`,
+							transformOrigin: 'top left',
+						}
 						: {}
 				}
 			>
