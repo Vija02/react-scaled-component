@@ -1,6 +1,6 @@
 {
 	"name": "react-scaled-component",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "A simple React component to help create responsive websites",
 	"main": "dist/index.js",
 	"scripts": {
